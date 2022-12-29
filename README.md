@@ -26,6 +26,10 @@ This started off as a passion project just for me and Necro, and I think it’s 
 B+ on top, All love <3 -ben
 <br>
 <br>
+## Downgraded to 1.19.2
+Most of the combat and other modules has been removed due to the Meteor color settings used. Now Banana+ will work with 1.19.2.
+<br>
+<br>
 ## Credits
 Creators (retired): [Bennooo](https://github.com/Bennooo) , [RickyTheRacc](https://github.com/RickyTheRacc), Necro <br>
 Packet Fly used with permission from [Cally72jhb](https://github.com/cally72jhb)<br>
