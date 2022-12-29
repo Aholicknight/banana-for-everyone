@@ -350,21 +350,6 @@ public class CevBreaker extends Module {
             }
         }
 
-        //Breaking the crystal
-        BananaBomber BBomber = Modules.get().get(BananaBomber.class);
-        if(BBomber.bestTarget == null || BBomber.bestTarget != closestTarget || BBomber.BminDamage.get() >= 6) {
-            if (mode.get() == Mode.Packet && breakDelayLeft >= 0) return;
-            for(EndCrystalEntity crystal : crystals) {
-                if(DamageUtils.crystalDamage(closestTarget, crystal.getPos()) >= 6) {
-                    float[] breakRotation = PlayerUtils.calculateAngle(BEntityUtils.crystalEdgePos(crystal));
-                    if(swing.get()) mc.player.swingHand(Hand.MAIN_HAND);
-                    else mc.getNetworkHandler().sendPacket(new HandSwingC2SPacket(Hand.MAIN_HAND));
-                    if(rotate.get()) Rotations.rotate(breakRotation[0], breakRotation[1], 30, () -> mc.player.networkHandler.sendPacket(PlayerInteractEntityC2SPacket.attack(crystal, false)));
-                    else mc.player.networkHandler.sendPacket(PlayerInteractEntityC2SPacket.attack(crystal, false));
-                    break;
-                }
-            }
-        }
     }
 
     private void getEntities() {

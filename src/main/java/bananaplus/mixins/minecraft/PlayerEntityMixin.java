@@ -1,7 +1,6 @@
 package bananaplus.mixins.minecraft;
 
 import bananaplus.modules.combat.AnchorPlus;
-import bananaplus.modules.misc.Platform;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import net.minecraft.entity.player.PlayerEntity;
 import org.spongepowered.asm.mixin.Mixin;
@@ -14,7 +13,6 @@ public class PlayerEntityMixin {
     @Inject(method = "jump", at = @At("HEAD"), cancellable = true)
     public void dontJump(CallbackInfo info) {
         AnchorPlus anchorPlus = Modules.get().get(AnchorPlus.class);
-        Platform platform = Modules.get().get(Platform.class);
-        if ((anchorPlus.isActive() && anchorPlus.cancelJump) || (platform.isActive() && platform.cancelJump)) info.cancel();
+        if ((anchorPlus.isActive() && anchorPlus.cancelJump) ) info.cancel();
     }
 }

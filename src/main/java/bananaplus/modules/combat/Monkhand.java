@@ -234,11 +234,6 @@ public class Monkhand extends Module {
         // Xp
         else if (xpOnXP.get() && xpthrower.isActive() && (!xpthrower.isRepaired() || xpthrower.justThrow.get()) && !xpthrower.replenish.get() && xpthrower.throwBind.get().isPressed()) currentItem = Item.Exp;
 
-        // Crystals
-        else if ((modules.isActive(CrystalAura.class) && crystalCa.get() || modules.isActive(BananaBomber.class) && crystalCa.get())
-                || mc.interactionManager.isBreakingBlock() && crystalMine.get()
-                || modules.isActive(CevBreaker.class) && crystalCev.get()
-        ) currentItem = Item.Crystal;
 
         // Rocket
         else if ((mc.player.getMainHandStack().getItem() instanceof CrossbowItem) && rocketBow.get()) currentItem = Item.Firework;

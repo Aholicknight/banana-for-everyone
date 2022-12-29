@@ -32,6 +32,9 @@ dependencies {
 
     // Meteor
     modImplementation "meteordevelopment:meteor-client:${project.meteor_version}"
+
+    // JOML
+    implementation 'org.joml:joml:1.9.25'
 }
 
 processResources {

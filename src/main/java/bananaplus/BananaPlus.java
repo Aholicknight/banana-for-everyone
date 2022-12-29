@@ -1,7 +1,6 @@
 package bananaplus;
 
 import bananaplus.modules.combat.*;
-import bananaplus.modules.combat.BananaBomber;
 import bananaplus.modules.hud.*;
 import bananaplus.modules.misc.*;
 import bananaplus.utils.*;
@@ -40,46 +39,36 @@ public class BananaPlus extends MeteorAddon {
 
 		// HUD
 		Log("Adding HUD modules...");
-
+		// modules causing meteordevelopment.meteorclient.settings.ColorSetting$Builder has been removed.
 		Hud.get().register(ItemCounter.INFO);
-		Hud.get().register(BindsHud.INFO);
 		Hud.get().register(LogoHud.INFO);
 		Hud.get().register(WelcomeHud.INFO);
 		Hud.get().register(TextPresets.INFO);
 
 
 		// Combat
+		// modules causing meteordevelopment.meteorclient.settings.ColorSetting$Builder has been removed.
 		Log("Adding Combat modules...");
-
 		Modules.get().add(new ArmorMessages());
-		Modules.get().add(new AutoCityPlus());
-		Modules.get().add(new AutoTrapPlus());
 		Modules.get().add(new XPThrower());
 		Modules.get().add(new AnchorPlus());
 		Modules.get().add(new AntiTrap());
-		Modules.get().add(new BurrowESP());
-		Modules.get().add(new BurrowMiner());
-		Modules.get().add(new AntiSurround());
-		Modules.get().add(new BananaBomber());
 		Modules.get().add(new CevBreaker());
-		Modules.get().add(new CityESPPlus());
-		Modules.get().add(new HoleESPPlus());
 		Modules.get().add(new MonkeBurrow());
 		Modules.get().add(new Monkhand());
 		Modules.get().add(new MonkeTotem());
 		Modules.get().add(new PostTickKA());
 		Modules.get().add(new QuiverPlus());
 		Modules.get().add(new QuiverRewrite());
-		Modules.get().add(new SelfTrapPlus());
 		Modules.get().add(new SmartHoleFill());
 		Modules.get().add(new StepPlus());
 		Modules.get().add(new StrafePlus());
-		Modules.get().add(new SurroundPlus());
 		Modules.get().add(new ReverseStepTimer());
 		Modules.get().add(new TickShift());
 
 
 		// Misc
+		// modules causing meteordevelopment.meteorclient.settings.ColorSetting$Builder has been removed.
 		Log("Adding Other modules...");
 
 		Modules.get().add(new AutoBuild());
@@ -88,12 +77,9 @@ public class BananaPlus extends MeteorAddon {
 		Modules.get().add(new AutoFollow());
 		Modules.get().add(new AutoSex());
 		Modules.get().add(new BindClickExtra());
-		Modules.get().add(new InstaMinePlus());
 		Modules.get().add(new KillEffects());
 		Modules.get().add(new MonkeFlight());
 		Modules.get().add(new OneClickEat());
-		Modules.get().add(new Platform());
-		Modules.get().add(new PrefixManager());
 		Modules.get().add(new Presence());
 		Modules.get().add(new SkinBlinker());
 		Modules.get().add(new TimeAnimator());
